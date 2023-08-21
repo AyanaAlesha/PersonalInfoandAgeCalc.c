@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h> 
+
+int main ()
+{
+char sentinel[]= "stop";
+char name[50];
+int year, month, age; 
+
+  
+printf("Hello, welcome \n");
+
+while (1) {
+printf("Enter your name (lowercase or type stop to end): \n");
+scanf("%s", &name);
+
+  if (strcmp(name, sentinel) == 0) {
+            printf("Exiting the program.\n");
+            break;
+  }
+  
+printf("Your name is : %s \n",name);
+printf("The length of your name is : %zu  characters \n",strlen(name));
+
+printf("What year were you born:  \n");
+scanf("%d", &year);
+
+printf("What month were you born(1-12): \n");
+scanf("%d", &month);
+
+  age = (2023 - year);
+  
+  if (month >=1 && month <=8) {
+    printf("Month of birth is between January and August, you are %d years old \n", age);
+
+  } 
+  else if (month >=8 && month <=12) {
+    printf("Month of birth is between September and December, you will be %d years old", age);
+  }
+  
+}
+  
+  return 0; 
+}
